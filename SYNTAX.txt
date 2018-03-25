@@ -1,0 +1,809 @@
+                                                                                1      SHORTHAND IF
+
+
+int main()
+{
+    char name[20];
+    scanf(" %s", name);
+
+    (name[0] > 'M') ? printf("yes\n") : printf("no\n");
+
+    printf(" %S",(name[0] > 'M') ? "y" : "n");
+
+    return 0;
+}
+
+
+
+                                                                     2      NESTED IF STATEMENTS  (PORN AGE)
+
+
+
+
+
+
+int main()
+{
+    int age;
+    printf("what is your age?\n");
+    scanf(" %d", &age);
+
+    char gender;
+    printf("what is your gender ?\n");
+    scanf(" %c",&gender);
+
+    if(age>=18){
+        printf("you may enter this website .");
+
+    if(gender=='m'){printf("dude\n");}else{printf(" CHIC\n");}
+
+    }
+
+    /*use else as in first case or use if again as in second case*/
+
+    if(age <18){
+        printf("go away kid. shu shu\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+                                                                3      WHILE  LOOP     (LOOP MADE ME RICH)
+ 
+
+
+
+
+
+int main()
+{   int day = 1,paise = 1;
+    float rupee;
+
+    while(day < 31){
+        printf("day %d . you have %d paise!\n",day,paise);
+        paise *= 2;
+        day   += 1;
+
+      }
+
+      printf("\nyou have %f million rupee\n",rupee = (float)paise/20000000);
+      printf("MAN! YOU ARE RICH.\n");
+      printf("WHERE IS THAT ONE MILLION GUY :)\n");
+
+
+    return 0;
+
+}
+
+
+
+
+
+
+                                                               4        DO WHILE TEST (MANY TEST AVERAGE)
+
+
+
+
+
+
+
+
+
+int main()
+{
+    float test = 0,average = 0,score =0, totalscore =0;
+    printf("Press 0 to exit.\n\n");
+
+    do{
+       printf("Total tests : %.0f          Average : %.2f \n",test,average);
+       printf("\nEnter your test score :");
+       scanf(" %f", &score);
+       totalscore += score;
+       test++;
+       average = totalscore / test;
+
+       }while(score != 0);
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                                 5       NESTED FOR LOOP   (TABLE)
+
+
+
+
+
+
+int main()
+{
+    int column, row;
+
+    for(row = 1; row <= 10; row++){
+
+
+    for(column = 1; column <= 10; column++){
+        printf(" %d ",column);
+    }
+            printf("\n");
+
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                                              6   FOR   IF   BREAK 
+
+
+
+
+
+int main()
+{
+    int a,b;
+
+    printf("Enter how many times you want this loop to occur ?   ");
+    scanf(" %d", &b);
+
+    for(a=1;a<=1000;a++){
+
+        printf("Loop will occour %d times.\n",a);
+
+        if(a==b){
+            break;
+        }
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+                                                   7      CONTINUE  DO   WHILE    LOOP     (AJS MOVIE THEATRE)
+
+
+
+
+
+
+int main()
+{
+    int s=1,s1,s2,s3;
+
+    printf("      A Js     M O V I E     T H E A T R E\n\n");
+    printf("\nTotal available seats = 10.          ");
+    printf("Select you seats (3) :\n");
+    scanf(" %d",&s1);
+    scanf(" %d",&s2);
+    scanf(" %d",&s3);
+    printf("Seat no. %d, %d and %d are occupied.\n\n",s1,s2,s3);
+
+    printf("Seats available :\n\n");
+
+
+
+    do{
+        if(s==s1 || s==s2 || s==s3){
+            s++;
+            continue;
+        }
+
+       printf("Seat no. %d is available.\n",s);
+       s++;
+
+    }while(s<=10);
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                                                  8         SWITCH
+
+
+
+
+
+
+int main()
+{
+    char grade;
+    printf("Enter your grade(A\B\C\D\F) :   ");
+    scanf(" %c", &grade);
+
+    switch(grade){
+
+    case 'A' :  printf("\nYou are Awesome.\n\n");
+                break;
+    case 'B' :  printf("\nYou are Badass.\n\n");
+                break;
+    case 'C' :  printf("\nYou C you didnt study. Well u do now.\n\n");
+                break;
+    case 'D' :  printf("\nYou are DUMB.\n\n");
+                break;
+    case 'F' :  printf("\nYou are Frickin dumb.\n\n");
+                break;
+    default :    printf("\nWhat r u ? A freak ? Dont mess with my program ! \n\n");
+   
+   }
+
+    return 0;
+}
+
+
+
+
+
+
+
+               9    ISALPHA  ISDIGIT   ISUPPER    ISLOWER          TOUPPER            (CTYPE.H)         POW    SQRT    CBRT      (MATH.H)
+
+
+
+
+
+
+int main()
+{
+    int tuna = 'c';
+
+    if( isalpha(tuna)){
+        printf("it is alphabet\n\n");
+
+    }else if( isdigit(tuna)){
+    printf("it is digit\n\n");
+
+    }else{printf("omg");}
+
+
+    printf(" %f\n",pow(2,8));
+    printf(" %f\n",sqrt(144));
+    printf(" %f\n",cbrt(8));
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                            10        strcat    strcpy    puts      gets
+
+
+
+
+
+int main()
+{
+
+   char name[100];
+   char food[100];
+   char sentence[100]= "";
+
+   puts("what is the cats name?");
+   gets(name);
+   puts("what does he like to eat?");
+   gets(food);
+   strcat(sentence,name);
+   strcat(sentence," lovez to eat y");
+   strcat(sentence,food);
+   puts(sentence);
+
+    return 0;
+}
+
+
+
+
+
+
+
+ 
+                                                           11      ROUND  UP            ABSOLUTE VALUE
+
+
+
+
+
+
+
+
+int main()
+{
+    float n1=36.36987,n2=3.32;
+
+    printf(" %f\n",floor(n1));
+    printf(" %f\n",ceil(n1));
+
+    printf(" %f\n",floor(n2));
+    printf(" %f\n",ceil(n2));
+
+    printf(" %d\n",(9-18));
+    printf(" %d\n",abs(9-18));
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+                                                  12        RAND         SRAND         DICE ROLL    GAME
+
+
+
+
+
+
+int main()
+{
+    int i,dice1,dice2,dice3,dice4,dice5,dice6,sum1,sum2;
+    char choice;
+    srand(time(0));//srand vaali ye line important hai.
+
+    printf("                                              DICE ROLL ROUND ONE\n\n");
+    dice1 = (rand()%6)+1;
+    dice2 = (rand()%6)+1;
+    dice3 = (rand()%6)+1;
+    printf("Respective dice outputs of round one are %d, %d and %d\n",dice1,dice2,dice3);
+    sum1=dice1+dice2+dice3;
+    printf("Sum of first round equals  :   %d\n\n\n\n",sum1);
+
+    printf("                                WANNA TRY YOUR LUCK? GUESS OUTPUT OF NEXT ROLL (h/l)  :     ");
+    scanf(" %c",&choice);
+
+    dice4 = (rand()%5)+2;
+    dice5 = (rand()%5)+2;
+    dice6 = (rand()%5)+2;
+    sum2=dice4+dice5+dice6;
+
+   if(choice=='h') {
+
+    if(sum2>sum1){printf("\n\nYOU ARE HELL OF A FRICKIN LUCKY DUDE\n\n");}else{printf("\n\nYOU ARE AN ASSHOLE. NEVER EVER GO TO LAS VEGAS.\n\n");}
+    printf("Respective dice outputs of second round were %d, %d and %d\n",dice4,dice5,dice6);
+    printf("Sum of second round equaled  :   %d\n\n",sum2);
+
+
+   }
+
+    else if(choice=='l') {
+
+    if(sum2<sum1){printf("\n\nYOU ARE HELL OF A FRICKIN LUCKY DUDE\n\n");}else{printf("\n\nYOU ARE AN ASSHOLE. NEVER EVER GO TO LAS VEGAS.\n\n\n\n");}
+    printf("Respective dice outputs of second round were %d, %d and %d\n",dice4,dice5,dice6);
+    printf("Sum of second round equaled  :   %d\n\n",sum2);
+
+
+   }else{printf(" \n\n                       TYPE IT RIGHT DUDE! NO TIME TO JOKE WHEN MILLIONS ARE AT STAKE  :) \n\n\n\n");}
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+              
+
+                                                               13        INT AND FLOAT ARRAY
+
+
+
+
+
+
+
+
+int main()
+{
+
+    int i,total=0,average,a;
+    int meatballs[10];
+
+    printf("Enter total no of days :    ");
+    scanf(" %d",&a);
+
+    for( i=0; i<a; i++ ){
+        printf("\nHow many meatbolls yoy ate on day %d   :      ",i+1);
+        scanf(" %d",&meatballs[i]);
+    }
+
+    for( i=0; i<a; i++ ){
+        total += meatballs[i];
+    }
+
+    average = total/i;
+    printf("\n Average    :    %d\n",average);
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+                                             14           OARALLEL ARRAYS     SELECTING BEST PLAYER      FANTASY BHOCKEY
+
+
+
+
+
+
+
+ int i;
+    int player[5] = {10,66,44,92,88};
+    int games[5] = {30,30,28,25,30};
+    int goals[5] = {40,36,20,32,28};
+    float ppg[5];
+    float bestppg=0.0;
+    int bestplayer;
+
+
+
+    for( i=0; i<5; i++ ){
+        ppg[i] = (float)goals[i]/(float)games[i];
+        printf("  %d \t %d \t %d \t %.2f \n",player[i],games[i],goals[i],ppg[i]);
+
+        if( ppg[i] > bestppg ){
+            bestppg = ppg[i];
+            bestplayer=player[i];
+        }
+
+    }
+    printf("Best player is %d",bestplayer);
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+            
+                                                       15            SORTING     BUBBLE   SORT
+
+
+
+
+
+int main()
+{   
+    int i,temp,sorted;
+    int goals[10];
+
+    srand(time(0));
+    printf("                                            B U B B L E       S O R T\n\n\n");
+    printf("Original list : \n\n");
+
+    for( i=0; i<10; i++){
+        goals[i] = (rand()%30)+1;
+        printf("%d\n",goals[i]);
+        }
+
+    while(1){
+        sorted = 0;
+
+        for( i=0; i<9; i++){
+
+            if(goals[i]>goals[i+1]){
+                temp=goals[i];
+                goals[i]=goals[i+1];
+                goals[i+1]=temp;
+                sorted = 1;
+            }
+        } if(sorted==0){break;}
+    }
+//MAIN  CODE      :      MAIN  CODE       :      MAIN  CODE        :        MAIN  CODE       :        MAIN  CODE       :       MAIN  CODE
+   printf("Sorted list :  \n\n");
+    for( i=0; i<10; i++){
+        printf("%d\n",goals[i]);
+        }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+                           16          TWO SCANF  IN  A  SINGLE  LOOP          FFLUSH(STDIN)           INFINITE PROGRAMME
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    float no,ans;
+    char codit;
+
+    printf("Enter a no.   : ");
+    while(1){
+        scanf(" %f",&no);
+        ans = sqrt(no);
+        printf("Square root of %f is %f\n\n",no,ans);
+        printf("Enter another no(y/n) : ");
+
+        fflush(stdin);
+
+        scanf("%c",&codit);
+        if(codit=='n'){break;}else if(codit == 'y'){continue;}
+
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+                                                   17                 POINTERS   BASICS       VIDEO    LECTURE   42
+
+
+
+
+
+
+int main()
+{
+    int tuna=20;
+
+    printf("Name \t Value \t Address \n");
+    printf("%s \t %d \t %p \n","tuna",tuna,&tuna);
+
+
+    int *ptuna = &tuna;
+    printf("%s \t %p \t %p \n","ptuna",ptuna,&ptuna);
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                             18         DEREFENCING    POINTERS
+
+
+
+
+int main()
+{
+
+    int tuna=20;
+    int *ptuna = &tuna;
+
+    printf("Name \t\t Value \t\t Address \n");
+    printf("%s \t\t %d \t\t %p \n","tuna",tuna,&tuna);
+    printf("%s \t\t %p \t %p \n\n","ptuna",ptuna,&ptuna);
+
+    printf("*ptuna = %d\n\n",*ptuna);
+
+    *ptuna = 71;
+    printf("*ptuna = %d\n",*ptuna);
+    printf("tuna = %d\n",tuna);
+
+    printf("ptuna = %p\n",ptuna);
+    printf("tuna = %p\n",&tuna);
+
+
+
+
+
+    return 0;
+}
+
+
+
+
+
+                                                  19            ARRAYS  AND  POINTERS  RELATION   VIDEOLECURE   44
+
+
+
+
+
+int main()
+{
+    int i,meatballs[5]={4,65,32,11,17};
+
+    printf("meatballs \t address \t value\n");
+    for( i=0; i<=4; i++ ){
+        printf("meatballs[%d] \t %p \t %d\n",i,&meatballs[i],meatballs[i]);
+    }
+
+    //just name of an array is actually pointer of first element of array that is address of first element of array.
+    printf("\nmeatballs \t \t %p\n",meatballs);
+
+
+    //derefrencing it.
+    printf("\nmeatballs \t \t %d\n",*meatballs);
+
+    //derefrencing other element
+    printf("meatballs[2] \t \t %d\n",*(meatballs+2));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                              20          CHAR       ARRAYS      STRING      AND     POINTERS
+
+
+
+
+
+int main()
+{
+    char *tuna = "stop doing that i am veg";
+    // A BETTER WAY OF WRITING CHARACTER ARRAYS SO THAT THEY CAN BE CHANGED JUST LIKE VARIABLES.
+    puts(tuna);
+
+    tuna = "change";
+    puts(tuna);
+
+    printf("\n%c\n",tuna[2]);
+    printf("\n%s\n",tuna);
+
+/*WITH NORMAL CHAR ARRAY WE CAN PRINT IT TOGETHER BY PUTS OR PRINTF AND PRINT IT CHARACTERWISE BUT THAT ARRAY
+IS BASICALLY A CONSTANT SO WE CANNOT CHANGE IT.
+BUT USING POINTER VARIABLE WE CAN CHANGE ITS VALUE.*/
+
+    return 0;
+}
+
+
+
+
+ 
+
+
+                                                            21           FGETS( VARIABLE NAME ,   LIMIT(NO)    ,   STDIN )
+
+
+
+
+
+
+int main()
+{
+    char movie[20];        // movie[20] HAS JUST BEEN USED TO SET LIMIT TO NO OF CHARACTERS IN STRIN WE CAN ADD
+    char *pmovie = movie; // WE DEFINED A POINTER VARIABLE AND ATTACHED IT TO ABOVE ARRAY CONSTANT SO THAT
+                                     //  THIS VARIABLE HAS SOME LIMIT.
+
+    fgets(pmovie, 20 ,stdin);       // fgets( VARIABLE NAME ,  LIMIT OF STRING ,   STFDIN   )
+    puts(pmovie);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                          22               HEAP   
+
+
+
+
+
+
+int main()
+{
+    int howmany, total=0, i;
+    int * no;
+    float average;
+
+    printf("how many you want to enter  :   ");
+    scanf(" %d", &howmany);
+
+    no = (int *)malloc(howmany * sizeof(int));
+
+    printf("enter them hoss\n");
+
+    for(i=0; i<howmany; i++){
+        scanf(" %d", &no[i]);
+        total += no[i];
+    }
+    average = (float)total/(float)howmany;
+    printf("\naverage is %f\n",average);
+
+    return 0;
+}
+
+
+
+
+
+
+                                                          23                

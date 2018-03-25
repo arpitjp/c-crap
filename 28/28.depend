@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1517156357 source:f:\hp\desktop\c crap\28\main.c
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1517155883 f:\hp\desktop\c crap\28\struct.h
+

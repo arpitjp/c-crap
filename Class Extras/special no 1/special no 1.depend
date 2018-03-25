@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1519229157 source:f:\hp\desktop\c crap\class extras\special no 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

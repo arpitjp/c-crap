@@ -1,0 +1,14 @@
+                                                      H   E   A   P
+
+
+
+Most basic function of heap is to increase data that can be entered.
+
+    int howmany, total=0, i;
+    int * no;                                                     //   define pointer variable
+    float average;
+
+    printf("how many you want to enter  :   ");
+    scanf(" %d", &howmany);
+
+    no = (int *)malloc(howmany * sizeof(int));      //   this is exactly how u use it

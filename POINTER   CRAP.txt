@@ -1,0 +1,127 @@
+
+                            POINTERS     AND      SIMPLE       VARIABLES
+
+
+
+
+
+
+
+POINTERS     special type of variables used to store address of any given variable. 
+
+
+* sign before pointer is used to tell computer that it is a special kind of variable called pointer
+
+
+p is put before name just for convinience as it distinguish pointers from other variable
+
+
+using   " &variablename "   with    " %p "   and    " pvariablename "   with   " %p "   is same
+                                                * ptuna = &tuna; 
+
+
+printing    " *ptuna "   with     " %d "   results in DEREFRENCING, which means it prints value of 
+variable the pointer is pointing to.
+It can also be used to change value of variable
+
+
+
+
+
+
+
+
+                                         POINTERS       AND        ARRAYS
+
+
+
+
+
+
+
+the basic name of an array is a pointer corresponding to first(0) element of that array.
+
+
+" *array "  derefrences to 0 th term of that array.
+" *(array+2) " derefrences to 2 nd term of that array i.e. it gives value of 2nd element of array 
+
+
+
+
+
+
+
+
+
+              POINTERS        AND         STRINGS      OR      CHARACTER    ARRAYS
+
+
+
+
+
+
+
+
+pointer of arrays that is " arrayname " is actually a constant. thus we can never change its value or
+put it to LHS in c programming. 
+
+even " arrayname[] " this does not work. 
+
+we can change it by using special fxns like " strcpy " and " strcat " or by changing each element 
+individually like " arrayname[0]= " , " arrayname[0]= " which is avery long way to change array
+
+
+
+
+simple array of characters is hard to change(as mentioned above) bcoz the array name is a constant.
+                  int moviei[] = "bucky is awesome.";                //char array
+
+but we can create a pointer variable of strings(stuff witthin then " " .) and since it is a variable it can
+be easily changed.
+such variable does not actually store string. it just stores the address of start of string and goes on
+until it reaches string terminator(\0)
+                                     int * movie2 = "buckyman .";                //pointer variable of strings
+                                     puts(movie2);
+                                     movie2 = "new title";                          //variable can be changed easily
+                                     puts(movie2)
+
+                           " THIS POINTER VARIABLE CAN ONLY BE DONE WITH STRING "
+
+
+
+
+fgets can be used for controlling lenth of string in string pointer variables
+
+    char movie[20];              // movie[20] has just been used to set limit to no of characters in string 
+                                        // we can add
+    char *pmovie = movie;   // we defined a pointer variable and attached it to above array 
+                                       //constant so this variable has that limit of characters
+
+    fgets(pmovie, 20 ,stdin);       // fgets( VARIABLE NAME ,  LIMIT OF STRING ,   STFDIN   )
+    puts(pmovie);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1515674384 source:c:\users\hp\desktop\c crap\11\main.c
+	<stdio.h>
+	<stdlib.h>
+	"info.h"
+
+1515674401 c:\users\hp\desktop\c crap\11\info.h
+
